@@ -1,11 +1,10 @@
 import React, { useContext } from 'react'
-import firebase from '../lib/firebase'
 import { FirebaseContext } from '../lib/contexts'
 import Head from 'next/head'
 import { Button, Typography, Container } from '@material-ui/core'
 
 const AuthButton: React.FC = () => {
-  const { auth, currentUser } = useContext(FirebaseContext)
+  const { auth, currentUser, firebase } = useContext(FirebaseContext)
 
   if (currentUser)
     return (
