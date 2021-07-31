@@ -1,13 +1,13 @@
-const firebase = require('@firebase/rules-unit-testing')
+import * as firebase from '@firebase/rules-unit-testing'
 const { getAuthedFirestore } = require('./helpers')
-const { PROJECT_ID } = process.env
+const TEST_PROJECT_ID = 'test-project-id'
 
 afterAll(async () => {
   await Promise.all(firebase.apps().map((app: any) => app.delete()))
 })
 
 afterEach(async () => {
-  await firebase.clearFirestoreData({ projectId: PROJECT_ID })
+  await firebase.clearFirestoreData({ projectId: TEST_PROJECT_ID })
 })
 
 describe('Firestore Test Sample', () => {

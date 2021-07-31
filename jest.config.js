@@ -9,5 +9,5 @@ module.exports = {
     },
   },
   preset: 'ts-jest',
-  setupFiles: ['./specs/setupTests.ts'],
+  setupFiles: [],
 }

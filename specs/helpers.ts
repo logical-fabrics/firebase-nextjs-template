@@ -1,6 +1,8 @@
-const firebase = require('@firebase/rules-unit-testing')
-const { PROJECT_ID } = process.env
+import * as firebase from '@firebase/rules-unit-testing'
+const TEST_PROJECT_ID = 'test-project-id'
 
 export const getAuthedFirestore = (auth: object | undefined = undefined) => {
-  return firebase.initializeTestApp({ projectId: PROJECT_ID, auth }).firestore()
+  return firebase
+    .initializeTestApp({ projectId: TEST_PROJECT_ID, auth })
+    .firestore()
 }
