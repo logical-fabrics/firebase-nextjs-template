@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "debug": "NODE_OPTIONS='--inspect' next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "deploy": "yarn build && firebase deploy",
     "start": "next start",
     "emu": "firebase emulators:start --only auth,functions,firestore,storage,pubsub --import=./emulator/data --export-on-exit",
