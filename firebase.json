@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "public": "out",
     "rewrites": [
       {
         "source": "**",
