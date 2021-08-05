@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "debug": "NODE_OPTIONS='--inspect' next dev",
+    "lint": "next lint",
     "build": "next build",
     "deploy": "yarn build && firebase deploy",
     "start": "next start",

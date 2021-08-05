@@ -713,10 +713,36 @@
     lodash.snakecase "^4.1.1"
     p-defer "^3.0.0"
 
-"@google-cloud/storage@^5.3.0", "@google-cloud/storage@^5.8.5":
+"@google-cloud/storage@^5.3.0":
   version "5.11.0"
   resolved "https://registry.yarnpkg.com/@google-cloud/storage/-/storage-5.11.0.tgz#f2414358f093034410bb03410176a5dcabc7bdf8"
   integrity sha512-UgdAwBelXpQhubYOHw0U/hDxCXIXFT2TqDc0JWUxtg+BeePZC0ohoFM/b/tJffE28AZW0urTQax5xbRNoDA1Sw==
+  dependencies:
+    "@google-cloud/common" "^3.7.0"
+    "@google-cloud/paginator" "^3.0.0"
+    "@google-cloud/promisify" "^2.0.0"
+    arrify "^2.0.0"
+    async-retry "^1.3.1"
+    compressible "^2.0.12"
+    date-and-time "^1.0.0"
+    duplexify "^4.0.0"
+    extend "^3.0.2"
+    gcs-resumable-upload "^3.3.0"
+    get-stream "^6.0.0"
+    hash-stream-validation "^0.2.2"
+    mime "^2.2.0"
+    mime-types "^2.0.8"
+    onetime "^5.1.0"
+    p-limit "^3.0.1"
+    pumpify "^2.0.0"
+    snakeize "^0.1.0"
+    stream-events "^1.0.1"
+    xdg-basedir "^4.0.0"
+
+"@google-cloud/storage@^5.8.5":
+  version "5.12.0"
+  resolved "https://registry.yarnpkg.com/@google-cloud/storage/-/storage-5.12.0.tgz#e855c96447819d3c1a0e1b00c437e86e9320d765"
+  integrity sha512-K4BwvvIzkGu0DWKoo7IWqUdrLYcauAijedqiWkeBEpJo9/7woNbqyDCZsKjdaCwt49XiPZXWs1hk/k6LZSxDmw==
   dependencies:
     "@google-cloud/common" "^3.7.0"
     "@google-cloud/paginator" "^3.0.0"
@@ -1391,9 +1417,9 @@
   integrity sha512-YSBPTLTVm2e2OoQIDYx8HaeWJ5tTToLH67kXR7zYNGupXMEHa2++G8k+DczX2cFVgalypqtyZIcU19AFcmOpmg==
 
 "@types/lodash@^4.14.104":
-  version "4.14.171"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.171.tgz#f01b3a5fe3499e34b622c362a46a609fdb23573b"
-  integrity sha512-7eQ2xYLLI/LsicL2nejW9Wyko3lcpN6O/z0ZLHrEQsg280zIdCv1t/0m6UtBjUHokCGBQ3gYTbHzDkZ1xOBwwg==
+  version "4.14.172"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.172.tgz#aad774c28e7bfd7a67de25408e03ee5a8c3d028a"
+  integrity sha512-/BHF5HAx3em7/KkzVKm3LrsD6HZAXuXO1AJZQ3cRRBZj4oHZDviWPYu0aEplAqDFNHZPW6d3G7KN+ONcCCC7pw==
 
 "@types/long@^4.0.0", "@types/long@^4.0.1":
   version "4.0.1"
@@ -4179,9 +4205,9 @@ firebase-admin@^9.8.0:
     "@google-cloud/storage" "^5.3.0"
 
 firebase-functions-test@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/firebase-functions-test/-/firebase-functions-test-0.3.0.tgz#c88af1cf98d5b945c76287521e7c1f41540e9e41"
-  integrity sha512-V1bOe3XZxbQNd4taaRbxNIwMjHxfo04LMTnA5KFS3jkEaJrHmKCsosLLtVG4eOw4iVQHrc+q4AlhpyJ66DjMbw==
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/firebase-functions-test/-/firebase-functions-test-0.3.1.tgz#34cd02f2527e17808cf0fd33efa1d0164f336d74"
+  integrity sha512-xqzzbW+qzG7uT4XQpwbOhxq3LwsJB0NvYs5+Du0vPGwI7viP9KKc8BvxnexTIhxzRZQf7ZJjVbhRBlavK3JA8w==
   dependencies:
     "@types/lodash" "^4.14.104"
     lodash "^4.17.5"
@@ -4633,7 +4659,22 @@ google-auth-library@^6.1.3:
     jws "^4.0.0"
     lru-cache "^6.0.0"
 
-google-auth-library@^7.0.0, google-auth-library@^7.0.2, google-auth-library@^7.3.0:
+google-auth-library@^7.0.0, google-auth-library@^7.0.2:
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/google-auth-library/-/google-auth-library-7.5.0.tgz#6b0a623dfb4ee7a8d93a0d25455031d1baf86181"
+  integrity sha512-iRMwc060kiA6ncZbAoQN90nlwT8jiHVmippofpMgo4YFEyRBaPouyM7+ZB742wKetByyy+TahshVRTx0tEyXGQ==
+  dependencies:
+    arrify "^2.0.0"
+    base64-js "^1.3.0"
+    ecdsa-sig-formatter "^1.0.11"
+    fast-text-encoding "^1.0.0"
+    gaxios "^4.0.0"
+    gcp-metadata "^4.2.0"
+    gtoken "^5.0.4"
+    jws "^4.0.0"
+    lru-cache "^6.0.0"
+
+google-auth-library@^7.3.0:
   version "7.4.1"
   resolved "https://registry.yarnpkg.com/google-auth-library/-/google-auth-library-7.4.1.tgz#1565d6a4f11171e4f7a54bf8b5eaa664d99fe0fe"
   integrity sha512-TNLFbGKZZKIzOLHKaSXCo1pSZQ1ZOaAZZPkVKQa4MM7vrRNfHGzRTwE2WDxWAow/35kJP1710ZTMY4Qf3jH3Gw==
