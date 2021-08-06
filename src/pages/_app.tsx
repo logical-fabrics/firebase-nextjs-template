@@ -4,7 +4,7 @@ import type { AppProps } from 'next/app'
 import { CssBaseline, Backdrop, CircularProgress } from '@material-ui/core'
 
 import { FirebaseContext } from '../lib/contexts'
-import { useFirebase } from '../lib/hooks'
+import { useFirebase } from '../lib/contexts'
 
 // Wait until initialized
 const FirebaseInitWrapper = ({ children }: { children: any }) => {
