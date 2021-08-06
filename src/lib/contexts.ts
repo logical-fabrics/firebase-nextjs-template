@@ -68,10 +68,10 @@ export const useFirebase = () => {
   }
 
   // when all flags in initStatus are false, then initializing == true
-  return {
+  return _.assign({}, firebaseContext, {
     initializing: _.some(_.values(initStatus)),
     currentUser: auth.currentUser,
     claims,
     updateClaims,
-  }
+  })
 }
