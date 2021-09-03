@@ -1,5 +1,8 @@
 import _ from 'lodash'
-import firebase from './firebase'
+import { getAuth, Auth, User } from '@firebase/auth'
+import { getFirestore, Firestore } from '@firebase/firestore'
+import { getFunctions, Functions } from '@firebase/functions'
+import { getStorage, FirebaseStorage } from '@firebase/storage'
 import {
   createContext,
   useEffect,
@@ -12,23 +15,21 @@ import {
 // FirebaseContext
 //
 interface UseFirebase {
-  firebase: typeof firebase
-  auth: firebase.auth.Auth
-  db: firebase.firestore.Firestore
-  functions: firebase.functions.Functions
-  storage: firebase.storage.Storage
+  auth: Auth
+  db: Firestore
+  functions: Functions
+  storage: FirebaseStorage
   initializing?: boolean
-  currentUser?: firebase.User
+  currentUser?: User
   claims?: object | null
   updateClaims?: () => Promise<void>
 }
 
 export const FirebaseContext = createContext<UseFirebase>({
-  firebase,
-  auth: firebase.auth(),
-  db: firebase.firestore(),
-  functions: firebase.app().functions(),
-  storage: firebase.storage(),
+  auth: getAuth(),
+  db: getFirestore(),
+  functions: getFunctions(),
+  storage: getStorage(),
 })
 
 export const useFirebase = () => {

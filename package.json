@@ -15,30 +15,30 @@
     "test:ci": "firebase emulators:exec --only auth,functions,firestore,storage,pubsub 'jest --detectOpenHandles'"
   },
   "dependencies": {
-    "@google-cloud/storage": "^5.8.5",
+    "@firebase/rules-unit-testing": "^2.0.0",
+    "@google-cloud/storage": "^5.14.0",
     "@material-ui/core": "^4.12.1",
     "@material-ui/icons": "^4.11.2",
     "axios": "^0.21.1",
-    "firebase": "^8.7.1",
-    "firebase-admin": "^9.8.0",
-    "firebase-functions": "^3.14.1",
+    "firebase": "^9.0.1",
+    "firebase-admin": "^9.11.1",
+    "firebase-functions": "^3.15.5",
     "lodash": "^4.17.21",
-    "next": "11.0.1",
+    "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@firebase/rules-unit-testing": "^1.3.10",
-    "@types/jest": "^26.0.24",
-    "@types/react": "17.0.14",
-    "@typescript-eslint/eslint-plugin": "^3.9.1",
-    "@typescript-eslint/parser": "^3.8.0",
-    "eslint": "7.30.0",
-    "eslint-config-next": "11.0.1",
-    "firebase-functions-test": "^0.3.0",
-    "firebase-tools": "^9.16.0",
-    "jest": "^27.0.6",
-    "ts-jest": "^27.0.3",
-    "typescript": "4.3.5"
+    "@types/jest": "^27.0.1",
+    "@types/react": "17.0.19",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
+    "firebase-functions-test": "^0.3.2",
+    "firebase-tools": "^9.17.0",
+    "jest": "^27.1.0",
+    "ts-jest": "^27.0.5",
+    "typescript": "4.4.2"
   }
 }

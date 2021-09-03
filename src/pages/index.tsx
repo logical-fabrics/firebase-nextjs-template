@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
+import { GoogleAuthProvider, signInWithRedirect } from 'firebase/auth'
 import { FirebaseContext } from '../lib/contexts'
 import Head from 'next/head'
 import { Button, Typography, Container } from '@material-ui/core'
 
 const AuthButton: React.FC = () => {
-  const { auth, currentUser, firebase } = useContext(FirebaseContext)
+  const { auth, currentUser } = useContext(FirebaseContext)
 
   if (currentUser)
     return (
@@ -17,8 +18,8 @@ const AuthButton: React.FC = () => {
     <Button
       variant='contained'
       onClick={() => {
-        const provider = new firebase.auth.GoogleAuthProvider()
-        auth.signInWithRedirect(provider)
+        const provider = new GoogleAuthProvider()
+        signInWithRedirect(auth, provider)
       }}>
       Sign In
     </Button>

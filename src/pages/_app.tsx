@@ -3,6 +3,7 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { CssBaseline, Backdrop, CircularProgress } from '@material-ui/core'
 
+import '../lib/init_firebase'
 import { FirebaseContext } from '../lib/contexts'
 import { useFirebase } from '../lib/contexts'
 
@@ -19,7 +20,7 @@ const FirebaseInitWrapper = ({ children }: { children: any }) => {
   return children
 }
 
-function MyApp({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <FirebaseContext.Provider value={useFirebase()}>
       <FirebaseInitWrapper>
@@ -29,4 +30,4 @@ function MyApp({ Component, pageProps }: AppProps) {
     </FirebaseContext.Provider>
   )
 }
-export default MyApp
+export default App
