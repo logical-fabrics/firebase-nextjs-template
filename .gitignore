@@ -19,7 +19,7 @@
 # misc
 .DS_Store
 *.pem
-# /emulator/data
+/emulator/data
 
 # debug
 *-debug.log*
