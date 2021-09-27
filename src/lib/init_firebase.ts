@@ -22,7 +22,9 @@ if (_.isEmpty(getApps())) {
   app = initializeApp(config)
 
   if (_.isEqual(process.env.NEXT_PUBLIC_USE_FIREBASE_EMULATOR, 'true')) {
-    connectAuthEmulator(getAuth(), 'http://localhost:9099')
+    connectAuthEmulator(getAuth(), 'http://localhost:9099', {
+      disableWarnings: true,
+    })
     connectFunctionsEmulator(getFunctions(), 'localhost', 5001)
     connectFirestoreEmulator(getFirestore(), 'localhost', 8080)
     connectStorageEmulator(getStorage(), 'localhost', 9199)
