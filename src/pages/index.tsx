@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { GoogleAuthProvider, signInWithRedirect } from 'firebase/auth'
 import { FirebaseContext } from '../lib/contexts'
 import Head from 'next/head'
-import { Button, Typography, Container } from '@material-ui/core'
+import { Button, Typography, Container } from '@mui/material'
 
 const AuthButton: React.FC = () => {
   const { auth, currentUser } = useContext(FirebaseContext)

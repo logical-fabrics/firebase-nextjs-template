@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { CssBaseline, Backdrop, CircularProgress } from '@material-ui/core'
+import { CssBaseline, Backdrop, CircularProgress } from '@mui/material'
 
 import '../lib/init_firebase'
 import { FirebaseContext } from '../lib/contexts'
