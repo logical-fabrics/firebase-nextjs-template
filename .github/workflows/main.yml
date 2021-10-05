@@ -1,11 +1,11 @@
 name: Test and Deploy
+
 on:
-  workflow_dispatch:
-    branches:
-      - develop
   push:
-    branches:
-      - develop
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
 jobs:
   test:
     name: Test
