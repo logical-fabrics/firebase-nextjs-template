@@ -11,6 +11,8 @@ const nextjsServer = next({
 })
 const nextjsHandle = nextjsServer.getRequestHandler()
 
+console.log('aaa', process.env.FOO)
+
 module.exports = functions
   .runWith({ memory: '2GB', minInstances: 1 })
   .https.onRequest((req, res) => {
