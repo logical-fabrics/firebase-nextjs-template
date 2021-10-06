@@ -9,10 +9,16 @@ const nextjsServer = next({
     distDir: nextjsDistDir,
   },
 })
+
+const minInstances = _.toNumber(
+  _.get(functions.config(), 'env.cf_min_instances', 0)
+)
+
 const nextjsHandle = nextjsServer.getRequestHandler()
 
 module.exports = functions
-  .runWith({ memory: '2GB', minInstances: 0 })
+  .runWith({ memory: '2GB' })
+  .runWith({ memory: '2GB', minInstances })
   .https.onRequest((req, res) => {
     return nextjsServer.prepare().then(() => {
       logger.info(req.path, req.query)

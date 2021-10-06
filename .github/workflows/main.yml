@@ -85,6 +85,11 @@ jobs:
       - name: Build
         working-directory: ./
         run: yarn build
+      - name: Set Config For Cloud Functions
+        run: firebase functions:config:set env.cf_min_instances=0 --token $FIREBASE_TOKEN --project $PROJECT_ID
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          PROJECT_ID: logifab-sandbox
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
