@@ -1,3 +1,4 @@
+const _ = require('lodash')
 const functions = require('firebase-functions')
 const { logger } = functions
 const { default: next } = require('next')
