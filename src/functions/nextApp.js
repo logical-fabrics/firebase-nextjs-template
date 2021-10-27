@@ -18,7 +18,7 @@ const minInstances = _.toNumber(
 const nextjsHandle = nextjsServer.getRequestHandler()
 
 module.exports = functions
-  .runWith({ memory: '2GB' })
+  .region('asia-northeast1')
   .runWith({ memory: '2GB', minInstances })
   .https.onRequest((req, res) => {
     return nextjsServer.prepare().then(() => {
